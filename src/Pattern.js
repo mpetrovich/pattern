@@ -14,7 +14,21 @@ function Pattern() {}
  * @param {Array} patterns
  * @return {Array}
  */
-Pattern.merge = merge;
+Pattern.merge = function (patterns) {
+	var patternsGroupedByName = _.groupBy(patterns, 'name');
+
+	var patternsMerged = _.map(patternsGroupedByName, function (patternsToMerge) {
+		var patternMerged = new Pattern();
+
+		_.forEach(patternsToMerge, function (pattern) {
+			patternMerged.import(pattern);
+		});
+
+		return patternMerged;
+	});
+
+	return patternsMerged;
+};
 
 /**
  * @param {String} name
@@ -56,25 +70,5 @@ Pattern.prototype.addExample = function (example, description) {
 Pattern.prototype.import = function (pattern) {
 	_.merge(this, pattern);
 };
-
-/* ---------------------------------------------------------------------
- * Private
- * --------------------------------------------------------------------- */
-
-function merge(patterns) {
-	var patternsGroupedByName = _.groupBy(patterns, 'name');
-
-	var patternsMerged = _.map(patternsGroupedByName, function (patternsToMerge) {
-		var patternMerged = new Pattern();
-
-		_.forEach(patternsToMerge, function (pattern) {
-			patternMerged.import(pattern);
-		});
-
-		return patternMerged;
-	});
-
-	return patternsMerged;
-}
 
 module.exports = Pattern;
