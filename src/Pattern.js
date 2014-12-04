@@ -31,10 +31,24 @@ Pattern.merge = function (patterns) {
 };
 
 /**
+ * @return {String}
+ */
+Pattern.prototype.getName = function () {
+	return this.name;
+};
+
+/**
  * @param {String} name
  */
 Pattern.prototype.setName = function (name) {
 	this.name = name;
+};
+
+/**
+ * @return {String}
+ */
+Pattern.prototype.getDescription = function () {
+	return this.description;
 };
 
 /**
@@ -45,11 +59,25 @@ Pattern.prototype.setDescription = function (description) {
 };
 
 /**
+ * @return {Array.<PatternParameter>}
+ */
+Pattern.prototype.getParameters = function () {
+	return this.parameters || [];
+};
+
+/**
  * @param {PatternParameter} parameter
  */
 Pattern.prototype.addParameter = function (parameter) {
 	this.parameters = this.parameters || [];
 	this.parameters.push(parameter);
+};
+
+/**
+ * @return {Array.<String>}
+ */
+Pattern.prototype.getExamples = function () {
+	return this.examples || [];
 };
 
 /**
