@@ -1,14 +1,14 @@
 {
-  "name": "pattern",
+  "name": "patternly-pattern",
   "version": "0.1.0",
-  "description": "Pattern models",
+  "description": "Patternly models",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/mpetrovich/pattern.git"
+    "url": "git://github.com/mpetrovich/patternly-pattern.git"
   },
   "keywords": [
     "patterndoc"
@@ -16,9 +16,9 @@
   "author": "Mike Petrovich <michael.c.petrovich@gmail.com> (https://github.com/mpetrovich/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mpetrovich/pattern/issues"
+    "url": "https://github.com/mpetrovich/patternly-pattern/issues"
   },
-  "homepage": "https://github.com/mpetrovich/pattern",
+  "homepage": "https://github.com/mpetrovich/patternly-pattern",
   "dependencies": {
     "lodash": "^2.4.1"
   }
