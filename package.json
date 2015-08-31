@@ -1,6 +1,6 @@
 {
   "name": "patternly-pattern",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "description": "Patternly models",
   "main": "index.js",
   "scripts": {
