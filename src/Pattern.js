@@ -81,14 +81,16 @@ Pattern.prototype.getExamples = function() {
 };
 
 /**
- * @param {String} example
  * @param {String} description
+ * @param {Array.<Object>} codeBlocks
+ * @param {String} codeBlocks[i].syntax
+ * @param {String} codeBlocks[i].code
  */
-Pattern.prototype.addExample = function(example, description) {
+Pattern.prototype.addExample = function(description, codeBlocks) {
 	this.examples = this.examples || [];
 	this.examples.push({
-		example: example,
-		description: description
+		description: description,
+		codeBlocks: codeBlocks,
 	});
 };
 
