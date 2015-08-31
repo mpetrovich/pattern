@@ -14,13 +14,13 @@ function Pattern() {}
  * @param {Array} patterns
  * @return {Array}
  */
-Pattern.merge = function (patterns) {
+Pattern.merge = function(patterns) {
 	var patternsGroupedByName = _.groupBy(patterns, 'name');
 
-	var patternsMerged = _.map(patternsGroupedByName, function (patternsToMerge) {
+	var patternsMerged = _.map(patternsGroupedByName, function(patternsToMerge) {
 		var patternMerged = new Pattern();
 
-		_.forEach(patternsToMerge, function (pattern) {
+		_.forEach(patternsToMerge, function(pattern) {
 			patternMerged.import(pattern);
 		});
 
@@ -33,42 +33,42 @@ Pattern.merge = function (patterns) {
 /**
  * @return {String}
  */
-Pattern.prototype.getName = function () {
+Pattern.prototype.getName = function() {
 	return this.name;
 };
 
 /**
  * @param {String} name
  */
-Pattern.prototype.setName = function (name) {
+Pattern.prototype.setName = function(name) {
 	this.name = name;
 };
 
 /**
  * @return {String}
  */
-Pattern.prototype.getDescription = function () {
+Pattern.prototype.getDescription = function() {
 	return this.description;
 };
 
 /**
  * @param {String} description
  */
-Pattern.prototype.setDescription = function (description) {
+Pattern.prototype.setDescription = function(description) {
 	this.description = description;
 };
 
 /**
  * @return {Array.<PatternParameter>}
  */
-Pattern.prototype.getParameters = function () {
+Pattern.prototype.getParameters = function() {
 	return this.parameters || [];
 };
 
 /**
  * @param {PatternParameter} parameter
  */
-Pattern.prototype.addParameter = function (parameter) {
+Pattern.prototype.addParameter = function(parameter) {
 	this.parameters = this.parameters || [];
 	this.parameters.push(parameter);
 };
@@ -76,7 +76,7 @@ Pattern.prototype.addParameter = function (parameter) {
 /**
  * @return {Array.<String>}
  */
-Pattern.prototype.getExamples = function () {
+Pattern.prototype.getExamples = function() {
 	return this.examples || [];
 };
 
@@ -84,7 +84,7 @@ Pattern.prototype.getExamples = function () {
  * @param {String} example
  * @param {String} description
  */
-Pattern.prototype.addExample = function (example, description) {
+Pattern.prototype.addExample = function(example, description) {
 	this.examples = this.examples || [];
 	this.examples.push({
 		example: example,
@@ -95,7 +95,7 @@ Pattern.prototype.addExample = function (example, description) {
 /**
  * @param {Pattern} pattern
  */
-Pattern.prototype.import = function (pattern) {
+Pattern.prototype.import = function(pattern) {
 	_.merge(this, pattern);
 };
 
