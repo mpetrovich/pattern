@@ -95,6 +95,15 @@ Pattern.prototype.addExample = function(description, codeBlocks) {
 };
 
 /**
+ * @param {String} key
+ * @param {String} value
+ */
+Pattern.prototype.addMeta = function(key, value) {
+	this.meta = this.meta || {};
+	this.meta[key] = value;
+};
+
+/**
  * @param {Pattern} pattern
  */
 Pattern.prototype.import = function(pattern) {
