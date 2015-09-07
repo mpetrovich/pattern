@@ -95,6 +95,13 @@ Pattern.prototype.addExample = function(description, codeBlocks) {
 };
 
 /**
+ * @return {Object} As { key: {String}, value: {String} }
+ */
+Pattern.prototype.getMeta = function() {
+	return this.meta || {};
+};
+
+/**
  * @param {String} key
  * @param {String} value
  */
