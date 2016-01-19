@@ -111,6 +111,21 @@ Pattern.prototype.addMeta = function(key, value) {
 };
 
 /**
+ * @return {Array.<String>}
+ */
+Pattern.prototype.getFilepaths = function() {
+	return this.filepaths || [];
+};
+
+/**
+ * @param {String} filepath
+ */
+Pattern.prototype.addFilepath = function(filepath) {
+	this.filepaths = this.filepaths || [];
+	this.filepaths.push(filepath);
+};
+
+/**
  * @param {Pattern} pattern
  */
 Pattern.prototype.import = function(pattern) {
