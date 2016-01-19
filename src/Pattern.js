@@ -95,7 +95,7 @@ Pattern.prototype.addExample = function(description, codeBlocks) {
 };
 
 /**
- * @return {Object} As { key: {String}, value: {String} }
+ * @return {Object} Set of key-value pairs
  */
 Pattern.prototype.getMeta = function() {
 	return this.meta || {};
@@ -103,7 +103,7 @@ Pattern.prototype.getMeta = function() {
 
 /**
  * @param {String} key
- * @param {String} value
+ * @param {*} value
  */
 Pattern.prototype.addMeta = function(key, value) {
 	this.meta = this.meta || {};
