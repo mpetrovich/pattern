@@ -47,6 +47,20 @@ Pattern.prototype.setName = function(name) {
 /**
  * @return {String}
  */
+Pattern.prototype.getSummary = function() {
+	return this.summary;
+};
+
+/**
+ * @param {String} summary
+ */
+Pattern.prototype.setSummary = function(summary) {
+	this.summary = summary;
+};
+
+/**
+ * @return {String}
+ */
 Pattern.prototype.getDescription = function() {
 	return this.description;
 };
