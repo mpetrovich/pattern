@@ -102,6 +102,9 @@ Pattern.prototype.getExamples = function() {
  * @param {Number} [height] in px
  */
 Pattern.prototype.addExample = function(description, codeBlocks, height) {
+	if (height !== undefined && height !== null) {
+		height = _.toNumber(height);
+	}
 	this.examples = this.examples || [];
 	this.examples.push({
 		description: description,
