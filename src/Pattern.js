@@ -99,11 +99,13 @@ Pattern.prototype.getExamples = function() {
  * @param {Array.<Object>} codeBlocks
  * @param {String} codeBlocks[i].syntax
  * @param {String} codeBlocks[i].code
+ * @param {Number} [height] in px
  */
-Pattern.prototype.addExample = function(description, codeBlocks) {
+Pattern.prototype.addExample = function(description, codeBlocks, height) {
 	this.examples = this.examples || [];
 	this.examples.push({
 		description: description,
+		height: height,
 		codeBlocks: codeBlocks,
 	});
 };
