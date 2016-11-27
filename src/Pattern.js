@@ -125,6 +125,20 @@ Pattern.prototype.addMeta = function(key, value) {
 };
 
 /**
+ * @return {String}
+ */
+Pattern.prototype.getSource = function() {
+	return this.source;
+};
+
+/**
+ * @param {String} source
+ */
+Pattern.prototype.setSource = function(source) {
+	this.source = source;
+};
+
+/**
  * @return {Array.<String>}
  */
 Pattern.prototype.getFilepaths = function() {
