@@ -47,15 +47,15 @@ Pattern.prototype.setName = function(name) {
 /**
  * @return {String}
  */
-Pattern.prototype.getSummary = function() {
-	return this.summary;
+Pattern.prototype.getTitle = function() {
+	return this.title;
 };
 
 /**
- * @param {String} summary
+ * @param {String} title
  */
-Pattern.prototype.setSummary = function(summary) {
-	this.summary = summary;
+Pattern.prototype.setTitle = function(title) {
+	this.title = title;
 };
 
 /**
