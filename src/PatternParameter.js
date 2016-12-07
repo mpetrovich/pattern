@@ -1,4 +1,8 @@
 /**
+ * @todo Store data in a private property
+ */
+
+/**
  * @constructs
  */
 function PatternParameter() {
