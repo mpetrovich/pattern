@@ -144,18 +144,17 @@ Pattern.prototype.setSource = function(source) {
 };
 
 /**
- * @return {Array.<String>}
+ * @return {String}
  */
-Pattern.prototype.getFilepaths = function() {
-	return this.filepaths || [];
+Pattern.prototype.getFilepath = function() {
+	return this.filepath;
 };
 
 /**
  * @param {String} filepath
  */
-Pattern.prototype.addFilepath = function(filepath) {
-	this.filepaths = this.filepaths || [];
-	this.filepaths.push(filepath);
+Pattern.prototype.setFilepath = function(filepath) {
+	this.filepath = filepath;
 };
 
 /**
