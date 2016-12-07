@@ -57,6 +57,7 @@ PatternParameter.prototype.getDefaultValue = function() {
  */
 PatternParameter.prototype.setDefaultValue = function(value) {
 	this.defaultValue = value;
+	this.isOptional = (value !== undefined);
 };
 
 module.exports = PatternParameter;
