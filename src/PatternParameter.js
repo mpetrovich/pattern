@@ -53,7 +53,7 @@ PatternParameter.prototype.setType = function(type) {
  * @return {Boolean}
  */
 PatternParameter.prototype.getRequired = function() {
-	return this.isRequired !== undefined;
+	return this.isRequired === undefined || this.isRequired === true;
 };
 
 /**
