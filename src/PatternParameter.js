@@ -1,7 +1,9 @@
 /**
  * @constructs
  */
-function PatternParameter() {}
+function PatternParameter() {
+	this.isRequired = true;
+}
 
 /**
  * @return {String}
@@ -57,7 +59,7 @@ PatternParameter.prototype.getDefaultValue = function() {
  */
 PatternParameter.prototype.setDefaultValue = function(value) {
 	this.defaultValue = value;
-	this.isOptional = (value !== undefined);
+	this.isRequired = (value === undefined);
 };
 
 module.exports = PatternParameter;
