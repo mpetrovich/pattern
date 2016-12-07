@@ -52,6 +52,20 @@ PatternParameter.prototype.setType = function(type) {
 };
 
 /**
+ * @return {Boolean}
+ */
+PatternParameter.prototype.getRequired = function() {
+	return this.isRequired;
+};
+
+/**
+ * @param {Boolean} type
+ */
+PatternParameter.prototype.setRequired = function(isRequired) {
+	this.isRequired = isRequired;
+};
+
+/**
  * @return {String}
  */
 PatternParameter.prototype.getDefaultValue = function() {
@@ -63,7 +77,6 @@ PatternParameter.prototype.getDefaultValue = function() {
  */
 PatternParameter.prototype.setDefaultValue = function(value) {
 	this.defaultValue = value;
-	this.isRequired = (value === undefined);
 };
 
 module.exports = PatternParameter;
