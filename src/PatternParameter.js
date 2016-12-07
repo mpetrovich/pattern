@@ -5,9 +5,7 @@
 /**
  * @constructs
  */
-function PatternParameter() {
-	this.isRequired = true;
-}
+function PatternParameter() {}
 
 /**
  * @return {String}
@@ -55,7 +53,7 @@ PatternParameter.prototype.setType = function(type) {
  * @return {Boolean}
  */
 PatternParameter.prototype.getRequired = function() {
-	return this.isRequired;
+	return this.isRequired !== undefined;
 };
 
 /**
